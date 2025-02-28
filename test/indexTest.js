@@ -7,6 +7,7 @@ describe('index.js', function () {
     });
   });
 
+  let cats = ["Milo", "Otis", "Garfield"];
   describe('Array functions', function () {
     beforeEach(function () {
       cats.length = 0;
@@ -14,6 +15,10 @@ describe('index.js', function () {
       cats.push('Milo', 'Otis', 'Garfield');
     });
 
+    let cat = ["Milo", "Otis", "Garfield"];
+    function destructivelyAppendCat(name) {
+      cats.push(name);
+    }
     describe('destructivelyAppendCat(name)', function () {
       it('appends a cat to the end of the cats array', function () {
         destructivelyAppendCat('Ralph');
@@ -22,6 +27,10 @@ describe('index.js', function () {
       });
     });
 
+    let cats = ["Milo", "Otis", "Garfield"];
+    function destructivelyPrependCat(name) {
+      cats.unshift(name);
+    }
     describe('destructivelyPrependCat(name)', function () {
       it('prepends a cat to the beginning of the cats array', function () {
         destructivelyPrependCat("Bob");
